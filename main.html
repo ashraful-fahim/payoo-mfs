@@ -16,7 +16,7 @@
                 <div class="flex items-center">
                     <img src="./assets/Group.png" alt="">
                     <div>
-                        <h1 class="text-2xl font-bold">$45000</h1>
+                        <h1 class="text-2xl font-bold">$ <span id="main-balance">4500</span></h1>
                         <p class="border-2 bg-white-400 rounded-sm px-1">Available Balance</p>
                     </div>
                 </div>
@@ -70,11 +70,14 @@
                                         <label class="fieldset-label">Account Number</label>
                                         <input value="01778079803" id="account-number" type="number" class="input"
                                             placeholder="Enter your account number" required />
+                                        <label class="fieldset-label">Amount</label>
+                                        <input id="amount" type="number" class="input"
+                                            placeholder="Enter the amount you want to add" required />
                                         <label class="fieldset-label">PIN</label>
-                                        <input value="1234" id="pin" type="text" class="input"
+                                        <input id="pin" type="text" class="input"
                                             placeholder="Enter your PIN" required />
                                         <div><a class="link link-hover">Forgot password?</a></div>
-                                        <button id="login-btn" class="btn btn-neutral mt-4 bg-blue-700">Add Money</button>
+                                        <button id="add-money-btn" class="btn btn-neutral mt-4 border-none bg-blue-700">Add Money</button>
                                     </fieldset>
                                 </div>
                             </div>
@@ -84,6 +87,8 @@
             </section>
         </header>
     </section>
+
+    <script src="./script/addMoney.js"></script>
 </body>
 
 </html>
