@@ -27,11 +27,11 @@
                 <p class="">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
                 <!-- Cards Container -->
                 <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
-                    <div class="box cursor-pointer border p-4 rounded-sm text-center">
+                    <div id="add-money-box" class="box cursor-pointer border p-4 rounded-sm text-center">
                         <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="">
                         <h3>Add Money</h3>
                     </div>
-                    <div class="box border p-4 rounded-sm text-center">
+                    <div id="cash-out-box" class="box cursor-pointer border p-4 rounded-sm text-center">
                         <img class="w-8 mx-auto" src="./assets/send1.png" alt="">
                         <h3>Cash Out</h3>
                     </div>
@@ -53,8 +53,8 @@
                     </div>
                 </div>
                 <!-- Add Money Section -->
-                <section>
-                    <h2>Add Money</h2>
+                <section id="add-money" class="mt-5">
+                    <h2 class="text-2xl font-semibold pl-4">Add Money</h2>
                     <div>
                         <div class="hero-content flex-col lg:flex-row-reverse">
                             <div class="card w-full max-w-sm shrink-0 shadow-2xl">
@@ -74,10 +74,37 @@
                                         <input id="amount" type="number" class="input"
                                             placeholder="Enter the amount you want to add" required />
                                         <label class="fieldset-label">PIN</label>
-                                        <input id="pin" type="text" class="input"
-                                            placeholder="Enter your PIN" required />
+                                        <input id="pin" type="text" class="input" placeholder="Enter your PIN"
+                                            required />
                                         <div><a class="link link-hover">Forgot password?</a></div>
-                                        <button id="add-money-btn" class="btn btn-neutral mt-4 border-none bg-blue-700">Add Money</button>
+                                        <button id="add-money-btn"
+                                            class="btn btn-neutral mt-4 border-none bg-blue-700">Add Money</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Cash Out Section -->
+                <section id="cash-out" class="mt-5">
+                    <h2 class="text-2xl font-semibold pl-4">Cash Out</h2>
+                    <div>
+                        <div class="hero-content flex-col lg:flex-row-reverse">
+                            <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                                <div class="card-body">
+                                    <fieldset class="fieldset">
+                                        <label class="fieldset-label">Account Number</label>
+                                        <input value="01778079803" id="account-number" type="number" class="input"
+                                            placeholder="Enter your account number" required />
+                                        <label class="fieldset-label">Amount</label>
+                                        <input id="cashout-amount" type="number" class="input"
+                                            placeholder="Enter the amount you want to add" required />
+                                        <label class="fieldset-label">PIN</label>
+                                        <input id="cash-out-pin" type="text" class="input" placeholder="Enter your PIN"
+                                            required/>
+                                        <div><a class="link link-hover">Forgot password?</a></div>
+                                        <button id="cash-out-btn"
+                                            class="btn btn-neutral mt-4 border-none bg-blue-700">Cash Out</button>
                                     </fieldset>
                                 </div>
                             </div>
@@ -89,6 +116,8 @@
     </section>
 
     <script src="./script/addMoney.js"></script>
+    <script src="./script/toggle.js"></script>
+    <script src="./script/cashOut.js"></script>
 </body>
 
 </html>
