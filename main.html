@@ -60,11 +60,11 @@
                             <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                                 <div class="card-body">
                                     <legend>Select Bank</legend>
-                                    <select class="select">
+                                    <select id="all-bank" class="select">
                                         <option disabled selected>Select a mobile wallet</option>
-                                        <option value="bkash">Bkash</option>
-                                        <option value="upay">Upay</option>
-                                        <option value="rocket">Rocket</option>
+                                        <option value="Bkash">Bkash</option>
+                                        <option value="UPay">UPay</option>
+                                        <option value="Rocket">Rocket</option>
                                     </select>
                                     <fieldset class="fieldset">
                                         <label class="fieldset-label">Account Number</label>
@@ -92,6 +92,13 @@
                         <div class="hero-content flex-col lg:flex-row-reverse">
                             <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                                 <div class="card-body">
+                                    <legend>Select Bank</legend>
+                                    <select id="cashout-all-bank" class="select">
+                                        <option disabled selected>Select a mobile wallet</option>
+                                        <option value="Bkash">Bkash</option>
+                                        <option value="UPay">UPay</option>
+                                        <option value="Rocket">Rocket</option>
+                                    </select>
                                     <fieldset class="fieldset">
                                         <label class="fieldset-label">Account Number</label>
                                         <input value="01778079803" id="cashout-account-number" type="number" class="input"
