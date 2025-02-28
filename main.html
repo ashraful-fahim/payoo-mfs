@@ -29,27 +29,27 @@
                 <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
                     <div id="add-money-box" class="box cursor-pointer border p-4 rounded-sm text-center">
                         <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="">
-                        <h3>Add Money</h3>
+                        <h3 class="font-semibold">Add Money</h3>
                     </div>
                     <div id="cash-out-box" class="box cursor-pointer border p-4 rounded-sm text-center">
                         <img class="w-8 mx-auto" src="./assets/send1.png" alt="">
-                        <h3>Cash Out</h3>
+                        <h3 class="font-semibold">Cash Out</h3>
                     </div>
                     <div class="box border p-4 rounded-sm text-center">
                         <img class="w-8 mx-auto" src="./assets/money1.png" alt="">
-                        <h3>Transfer Money</h3>
+                        <h3 class="text-sm font-semibold pt-1">Transfer Money</h3>
                     </div>
                     <div class="box border p-4 rounded-sm text-center">
                         <img class="w-8 mx-auto" src="./assets/bonus1.png" alt="">
-                        <h3>Get Bonus</h3>
+                        <h3 class="font-semibold pt-1">Get Bonus</h3>
                     </div>
                     <div class="box border p-4 rounded-sm text-center">
                         <img class="w-8 mx-auto" src="./assets/purse1.png" alt="">
-                        <h3>Pay Bill</h3>
+                        <h3 class="font-semibold pt-1">Pay Bill</h3>
                     </div>
-                    <div class="box border p-4 rounded-sm text-center">
+                    <div id="transaction-box" class="box cursor-pointer border p-4 rounded-sm text-center">
                         <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="">
-                        <h3>Transactions</h3>
+                        <h3 class="font-semibold pt-1">Transactions</h3>
                     </div>
                 </div>
                 <!-- Add Money Section -->
@@ -94,7 +94,7 @@
                                 <div class="card-body">
                                     <fieldset class="fieldset">
                                         <label class="fieldset-label">Account Number</label>
-                                        <input value="01778079803" id="account-number" type="number" class="input"
+                                        <input value="01778079803" id="cashout-account-number" type="number" class="input"
                                             placeholder="Enter your account number" required />
                                         <label class="fieldset-label">Amount</label>
                                         <input id="cashout-amount" type="number" class="input"
@@ -109,6 +109,12 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </section>
+                <!-- Transaction Section -->
+                <section id="transaction" class="mt-5">
+                    <div id="transaction-container" class="text-center space-y-1">
+                        <h2 class="text-3xl font-bold text-red-500">Transaction History</h3>
                     </div>
                 </section>
             </section>

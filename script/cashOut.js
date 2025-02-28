@@ -1,22 +1,34 @@
 document.getElementById('cash-out-btn')
     .addEventListener('click', function (event) {
         event.preventDefault();
-        const amount = document.getElementById('cashout-amount').value;
-        const convertedAmount = parseFloat(amount);
 
-        const pin = document.getElementById('cash-out-pin').value;
-        const convertedPin = parseInt(pin);
+        const account = document.getElementById('cashout-account-number').value;
 
-        const mainBalance = document.getElementById('main-balance').innerText;
-        const convertedMainBalance = parseFloat('mainBalance');
+        const amount = getInputValueById('cashout-amount');
 
-        // console.log(typeof convertedPin);
+        const pin = getInputValueById('cash-out-pin');
 
-        if (convertedPin === 1234){
-            sum = mainBalance - convertedAmount;
-            document.getElementById('main-balance').innerText = sum;
+        const mainBalance = getInnerTextById('main-balance');
+
+        if (account.length === 11){
+            if(pin === 1234){
+                sum = mainBalance - amount;
+                setElementText('main-balance',sum);   
+
+                const transactionContainer = document.getElementById('transaction-container');
+                
+                const p = document.createElement('p');
+                p.innerText = `
+                $${amount} is cashed out from A/C No. ${account}.
+                -------------------------------------------------
+                `
+                transactionContainer.appendChild(p);
+            }
+            else{
+                alert('Wrong PIN!!!')
+            }
         }
         else{
-            alert('Wrong PIN!!!');
+            alert('Please enter a valid account number!')
         }
     })
